@@ -5396,6 +5396,7 @@ void zxvision_generic_message_tooltip(char *titulo, int return_after_print_text,
 		cls_menu_overlay();
 	}
 
+	zxvision_window mi_ventana;
 	zxvision_window *ventana;
 
 	if (return_after_print_text) {
@@ -5406,7 +5407,6 @@ void zxvision_generic_message_tooltip(char *titulo, int return_after_print_text,
 	}
 
 	else {
-		zxvision_window mi_ventana;
 		ventana=&mi_ventana;
 	}
 	//printf ("antes de zxvision_new_window\n");		
@@ -9708,7 +9708,6 @@ int menu_dibuja_menu(int *opcion_inicial,menu_item *item_seleccionado,menu_item 
         do {
 		//printf ("Liberando %x\n",aux);
 		nextfree=aux->next;
-		free(aux);
                 aux=nextfree;
         } while (aux!=NULL);
 
